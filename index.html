@@ -1,0 +1,830 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<title>Royal Events</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+
+<link rel="stylesheet"
+href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+
+</head>
+
+<body>
+
+<nav>
+
+<div class="logo">
+
+Royal<span>Events</span>
+
+</div>
+
+<ul>
+<li><a href="#home">Home</a></li>
+<li><a href="#about">About</a></li>
+<li><a href="#services">Services</a></li>
+<li><a href="#gallery">Gallery</a></li>
+<li><a href="#contact">Contact</a></li>
+</ul>
+
+</nav>
+
+<section id="home" class="hero">
+<div class="hero-content">
+<h1>
+Creating <span>Unforgettable</span> Events
+</h1>
+<p>
+We specialize in luxury weddings, corporate events, birthdays, concerts, and celebrations with elegant planning and flawless execution.
+
+</p>
+<button class="btn" onclick="openBooking()">
+    Book Now
+</button>
+<!-- Booking Popup -->
+
+<div id="bookingPopup" class="popup">
+
+    <div class="popup-content">
+
+        <span class="close" onclick="closeBooking()">&times;</span>
+
+        <h2>Book Your Event</h2>
+
+  <form id="bookingForm">
+
+    <input type="text" placeholder="Your Name" required>
+    <input type="email" placeholder="Email Address" required>
+    <input type="tel" placeholder="Phone Number" required>
+
+    <select required>
+        <option value="">Select Event Type</option>
+        <option>Wedding</option>
+        <option>Birthday</option>
+        <option>Corporate Event</option>
+        <option>Concert</option>
+    </select>
+
+    <input type="date" required>
+
+    <textarea placeholder="Event Details"></textarea>
+
+    <button type="submit" class="submit-btn">
+        Confirm Booking
+    </button>
+
+</form>
+
+    </div>
+<!-- Success Popup -->
+
+<div id="successPopup" class="success-popup">
+
+    <div class="success-box">
+
+        <h2>✅ Booking Successful!</h2>
+
+        <p>Thank you for booking with Royal Events.</p>
+
+        <button onclick="closeSuccess()">
+            OK
+        </button>
+
+    </div>
+
+</div>
+</div>
+</div>
+<div class="hero-image">
+
+    <div class="glass">
+
+        <img id="heroSlider"
+        src="image/07.jpeg"
+        alt="Event">
+
+    </div>
+
+</div>
+</section>
+<section id="about">
+<h2 class="title">
+About Royal Events
+</h2>
+<div class="about-grid">
+<div class="about-card">
+<h3>Who We Are</h3>
+<p>
+Royal Events is a professional event management company dedicated to creating memorable experiences through innovative planning, creative decoration, and seamless execution.
+</p>
+</div>
+<div class="about-card">
+<h3>Our Mission</h3>
+<p>
+Our mission is to transform every celebration into an unforgettable experience with personalized planning, premium service, and attention to every detail.
+</p>
+</div>
+</div>
+<div class="stats">
+<div class="stat">
+<h2>500+</h2>
+<p>Events Completed</p>
+</div>
+<div class="stat">
+<h2>300+</h2>
+<p>Happy Clients</p>
+
+</div>
+
+<div class="stat">
+
+<h2>10+</h2>
+
+<p>Years Experience</p>
+
+</div>
+
+<div class="stat">
+
+<h2>50+</h2>
+
+<p>Professional Team</p>
+
+</div>
+
+</div>
+
+<section id="services" class="services">
+
+<h2 class="title">
+Our <span>Services</span>
+</h2>
+
+<div class="services-container">
+
+<div class="service-card">
+
+<div class="service-icon">
+💍
+</div>
+
+<h3>Wedding Planning</h3>
+
+<p>
+Luxury wedding planning with elegant decoration, catering, entertainment and complete event coordination.
+</p>
+
+<a href="#" class="service-btn" onclick="openBooking()">
+Book Now →
+</a>
+
+</div>
+
+<div class="service-card">
+
+<div class="service-icon">
+🎂
+</div>
+
+<h3>Birthday Events</h3>
+
+<p>
+Creative birthday celebrations for kids and adults with customized themes and unforgettable experiences.
+</p>
+
+<a href="#" class="service-btn" onclick="openBooking()">
+Book Now →
+</a>
+
+</div>
+
+<div class="service-card">
+
+<div class="service-icon">
+🏢
+</div>
+
+<h3>Corporate Events</h3>
+
+<p>
+Professional conferences, seminars, product launches and annual business meetings.
+</p>
+
+<a href="#" class="service-btn" onclick="openBooking()">
+Book Now →
+</a>
+
+</div>
+
+<div class="service-card">
+
+<div class="service-icon">
+🎵
+</div>
+
+<h3>Concerts</h3>
+
+<p>
+Large-scale music concerts, celebrity shows and premium stage productions.
+</p>
+
+<a href="#" class="service-btn" onclick="openBooking()">
+Book Now →
+</a>
+
+</div>
+
+<div class="service-card">
+
+<div class="service-icon">
+🎓
+</div>
+
+<h3>College Events</h3>
+
+<p>
+Symposiums, cultural festivals, farewell and graduation ceremonies.
+</p>
+
+<a href="#" class="service-btn" onclick="openBooking()">
+Book Now →
+</a>
+
+</div>
+
+<div class="service-card">
+
+<div class="service-icon">
+💐
+</div>
+
+<h3>Engagement</h3>
+
+<p>
+Luxury engagement decoration with photography and premium floral arrangements.
+</p>
+
+<a href="#" class="service-btn" onclick="openBooking()">
+Book Now →
+</a>
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- EVENT CATEGORIES -->
+
+<section id="gallery">
+
+<h2 class="title">
+Event Categories
+</h2>
+
+<div class="category-grid">
+
+<div class="category-card">
+<img src="https://images.unsplash.com/photo-1519741497674-611481863552?w=800" alt="">
+<div class="category-overlay">
+<h3>Wedding</h3>
+</div>
+</div>
+
+<div class="category-card">
+<img src="https://images.unsplash.com/photo-1464366400600-7168b8af9bc3?w=800" alt="">
+<div class="category-overlay">
+<h3>Birthday</h3>
+</div>
+</div>
+
+<div class="category-card">
+<img src="https://images.unsplash.com/photo-1511578314322-379afb476865?w=800" alt="">
+<div class="category-overlay">
+<h3>Corporate</h3>
+</div>
+</div>
+
+<div class="category-card">
+<img src="https://images.unsplash.com/photo-1493225457124-a3eb161ffa5f?w=800" alt="">
+<div class="category-overlay">
+<h3>Concert</h3>
+</div>
+</div>
+
+<div class="category-card">
+<img src="https://images.unsplash.com/photo-1523580846011-d3a5bc25702b?w=800" alt="">
+<div class="category-overlay">
+<h3>College Fest</h3>
+</div>
+</div>
+
+<div class="category-card">
+<img src="https://images.unsplash.com/photo-1520854221256-17451cc331bf?w=800" alt="">
+<div class="category-overlay">
+<h3>Baby Shower</h3>
+</div>
+</div>
+
+</div>
+
+</section>
+
+
+<!-- WHY CHOOSE US -->
+
+<section>
+
+<h2 class="title">
+Why Choose Us
+</h2>
+
+<div class="choose-grid">
+
+<div class="choose-card">
+<i class="fas fa-award"></i>
+<h3>Premium Quality</h3>
+<p>Elegant decoration and flawless execution for every event.</p>
+</div>
+
+<div class="choose-card">
+<i class="fas fa-users"></i>
+<h3>Professional Team</h3>
+<p>Experienced planners, decorators and coordinators.</p>
+</div>
+
+<div class="choose-card">
+<i class="fas fa-clock"></i>
+<h3>On-Time Delivery</h3>
+<p>Every event is completed with perfect scheduling and planning.</p>
+</div>
+
+<div class="choose-card">
+<i class="fas fa-headset"></i>
+<h3>24/7 Support</h3>
+<p>Our team is always available before, during and after your event.</p>
+</div>
+
+<div class="choose-card">
+<i class="fas fa-star"></i>
+<h3>500+ Events</h3>
+<p>Successfully organized weddings, birthdays and corporate events.</p>
+</div>
+
+<div class="choose-card">
+<i class="fas fa-heart"></i>
+<h3>100% Happy Clients</h3>
+<p>Customer satisfaction is our highest priority.</p>
+</div>
+
+</div>
+
+</section>
+
+<!-- PORTFOLIO -->
+
+<section>
+
+<h2 class="title">
+Our Portfolio
+</h2>
+
+<div class="gallery-grid">
+
+<div class="gallery-card">
+<img src="https://images.unsplash.com/photo-1519741497674-611481863552?w=900">
+<div class="gallery-overlay">
+<h3>Luxury Wedding</h3>
+<p>Grand Royal Wedding</p>
+</div>
+</div>
+
+<div class="gallery-card">
+<img src="https://images.unsplash.com/photo-1464366400600-7168b8af9bc3?w=900">
+<div class="gallery-overlay">
+<h3>Birthday Party</h3>
+<p>Kids Theme Celebration</p>
+</div>
+</div>
+
+<div class="gallery-card">
+<img src="https://images.unsplash.com/photo-1511578314322-379afb476865?w=900">
+<div class="gallery-overlay">
+<h3>Corporate Event</h3>
+<p>Business Conference</p>
+</div>
+</div>
+
+<div class="gallery-card">
+<img src="https://images.unsplash.com/photo-1493225457124-a3eb161ffa5f?w=900">
+<div class="gallery-overlay">
+<h3>Music Concert</h3>
+<p>Live Performance</p>
+</div>
+</div>
+
+<div class="gallery-card">
+<img src="https://images.unsplash.com/photo-1523580846011-d3a5bc25702b?w=900">
+<div class="gallery-overlay">
+<h3>College Fest</h3>
+<p>Cultural Festival</p>
+</div>
+</div>
+
+<div class="gallery-card">
+<img src="https://images.unsplash.com/photo-1520854221256-17451cc331bf?w=900">
+<div class="gallery-overlay">
+<h3>Baby Shower</h3>
+<p>Family Celebration</p>
+</div>
+</div>
+
+</div>
+
+</section>
+
+<!-- PRICING -->
+
+<section>
+
+<h2 class="title">
+Premium Packages
+</h2>
+
+<div class="price-grid">
+
+<div class="price-card">
+
+<div style="font-size:70px;">🥈</div>
+
+<h2>Silver</h2>
+
+<div class="price">₹25K</div>
+
+<ul>
+
+<li>Basic Decoration</li>
+
+<li>Photography</li>
+
+<li>Sound System</li>
+
+<li>Stage Setup</li>
+
+<li>Event Coordinator</li>
+
+</ul>
+
+<button class="package-btn">
+Book Now
+</button>
+
+</div>
+
+<div class="price-card popular">
+
+<div class="ribbon">
+POPULAR
+</div>
+
+<div style="font-size:70px;">👑</div>
+
+<h2>Gold</h2>
+
+<div class="price">₹75K</div>
+
+<ul>
+
+<li>Luxury Decoration</li>
+
+<li>Drone Photography</li>
+
+<li>LED Wall</li>
+
+<li>DJ & Live Music</li>
+
+<li>Premium Catering</li>
+
+<li>Dedicated Manager</li>
+
+</ul>
+
+<button class="package-btn">
+Book Now
+</button>
+
+</div>
+
+<div class="price-card">
+
+<div style="font-size:70px;">💎</div>
+
+<h2>Royal</h2>
+
+<div class="price">₹1.5L</div>
+
+<ul>
+
+<li>Royal Theme Design</li>
+
+<li>VIP Guest Management</li>
+
+<li>Luxury Lighting</li>
+
+<li>Celebrity Host</li>
+
+<li>Full Event Planning</li>
+
+<li>24/7 Premium Support</li>
+
+</ul>
+
+<button class="package-btn">
+Book Now
+</button>
+
+</div>
+
+</div>
+
+</section>
+<!-- EVENT TIMELINE -->
+
+<section>
+
+<h2 class="title">Event Process</h2>
+
+<div class="timeline">
+
+<div class="timeline-item">
+<div class="timeline-dot"></div>
+<div class="timeline-content">
+<h3>📞 Consultation</h3>
+<p>Understand client requirements and budget.</p>
+</div>
+</div>
+
+<div class="timeline-item">
+<div class="timeline-dot"></div>
+<div class="timeline-content">
+<h3>📝 Planning</h3>
+<p>Create event concept and schedule.</p>
+</div>
+</div>
+
+<div class="timeline-item">
+<div class="timeline-dot"></div>
+<div class="timeline-content">
+<h3>🎨 Decoration</h3>
+<p>Venue decoration and stage setup.</p>
+</div>
+</div>
+
+<div class="timeline-item">
+<div class="timeline-dot"></div>
+<div class="timeline-content">
+<h3>🎉 Event Day</h3>
+<p>Professional execution with complete coordination.</p>
+</div>
+</div>
+
+<div class="timeline-item">
+<div class="timeline-dot"></div>
+<div class="timeline-content">
+<h3>📷 Photography</h3>
+<p>Capture memorable moments with premium photography.</p>
+</div>
+</div>
+
+<div class="timeline-item">
+<div class="timeline-dot"></div>
+<div class="timeline-content">
+<h3>❤️ Happy Client</h3>
+<p>Deliver unforgettable memories and lifelong happiness.</p>
+</div>
+</div>
+
+</div>
+
+</section>
+
+<!-- TESTIMONIALS -->
+
+<section>
+
+<h2 class="title">Happy Clients</h2>
+
+<div class="testimonial-grid">
+
+<div class="testimonial-card">
+<img src="https://randomuser.me/api/portraits/women/45.jpg" class="client-img">
+<h3>Priya Sharma</h3>
+<div class="stars">★★★★★</div>
+<p>"The team organized our wedding perfectly. Every detail was beautiful and stress-free."</p>
+</div>
+
+<div class="testimonial-card">
+<img src="https://randomuser.me/api/portraits/men/32.jpg" class="client-img">
+<h3>Rahul Verma</h3>
+<div class="stars">★★★★★</div>
+<p>"Excellent corporate event management with outstanding professionalism."</p>
+</div>
+
+<div class="testimonial-card">
+<img src="https://randomuser.me/api/portraits/women/68.jpg" class="client-img">
+<h3>Ananya Rao</h3>
+<div class="stars">★★★★★</div>
+<p>"Amazing decoration, friendly staff and unforgettable birthday celebration."</p>
+</div>
+
+</div>
+
+</section>
+
+<!-- OUR TEAM -->
+
+<section>
+
+<h2 class="title">Meet Our Team</h2>
+
+<div class="team-grid">
+
+<div class="team-card">
+<img src="https://randomuser.me/api/portraits/men/15.jpg">
+<div class="team-info">
+<h3>Arun Kumar</h3>
+<p>Founder & CEO</p>
+<div class="team-social">
+<i class="fab fa-facebook"></i>
+<i class="fab fa-instagram"></i>
+<i class="fab fa-linkedin"></i>
+</div>
+</div>
+</div>
+
+<div class="team-card">
+<img src="https://randomuser.me/api/portraits/women/25.jpg">
+<div class="team-info">
+<h3>Divya Nair</h3>
+<p>Wedding Planner</p>
+<div class="team-social">
+<i class="fab fa-facebook"></i>
+<i class="fab fa-instagram"></i>
+<i class="fab fa-linkedin"></i>
+</div>
+</div>
+</div>
+
+<div class="team-card">
+<img src="https://randomuser.me/api/portraits/men/55.jpg">
+<div class="team-info">
+<h3>Vikram Singh</h3>
+<p>Creative Director</p>
+<div class="team-social">
+<i class="fab fa-facebook"></i>
+<i class="fab fa-instagram"></i>
+<i class="fab fa-linkedin"></i>
+</div>
+</div>
+</div>
+
+<div class="team-card">
+<img src="https://randomuser.me/api/portraits/women/52.jpg">
+<div class="team-info">
+<h3>Neha Patel</h3>
+<p>Event Coordinator</p>
+<div class="team-social">
+<i class="fab fa-facebook"></i>
+<i class="fab fa-instagram"></i>
+<i class="fab fa-linkedin"></i>
+</div>
+</div>
+</div>
+
+</div>
+
+</section>
+<!-- FAQ -->
+
+<section>
+
+<h2 class="title">Frequently Asked Questions</h2>
+
+<div class="faq">
+
+<div class="faq-item">
+<div class="faq-question">
+How do I book an event?
+<span>+</span>
+</div>
+<div class="faq-answer">
+Book through our contact form or call our team directly.
+</div>
+</div>
+
+<div class="faq-item">
+<div class="faq-question">
+Do you provide catering?
+<span>+</span>
+</div>
+<div class="faq-answer">
+Yes, we offer premium catering for all event types.
+</div>
+</div>
+
+<div class="faq-item">
+<div class="faq-question">
+Can I customize my package?
+<span>+</span>
+</div>
+<div class="faq-answer">
+Absolutely! Every package can be customized to your needs.
+</div>
+</div>
+
+</div>
+
+</section>
+
+<!-- CONTACT -->
+
+<section id="contact">
+
+<h2 class="title">Contact Us</h2>
+
+<div class="contact-grid">
+
+<div class="contact-info">
+
+<h3>Royal Events</h3>
+
+<p>📍 Chennai, Tamil Nadu</p>
+
+<p>📞 +91 98765 43210</p>
+
+<p>✉ info@royalevents.com</p>
+
+<p>🕒 Mon - Sat : 9 AM - 8 PM</p>
+
+</div>
+
+<div class="contact-form">
+
+<input type="text" placeholder="Your Name">
+
+<input type="email" placeholder="Email">
+
+<input type="tel" placeholder="Phone">
+
+<textarea rows="6" placeholder="Tell us about your event"></textarea>
+
+<button>Send Message</button>
+
+</div>
+
+</div>
+
+<iframe
+src="https://www.google.com/maps?q=Chennai&output=embed">
+</iframe>
+
+</section>
+
+<!-- FOOTER -->
+
+<footer>
+
+<h2>Royal Events</h2>
+
+<p>Creating unforgettable memories with luxury event planning.</p>
+
+<div class="social">
+
+<i class="fab fa-facebook"></i>
+
+<i class="fab fa-instagram"></i>
+
+<i class="fab fa-twitter"></i>
+
+<i class="fab fa-linkedin"></i>
+
+</div>
+
+<p style="margin-top:30px;">
+© 2026 Royal Events. All Rights Reserved.
+</p>
+
+</footer>
+
+<button id="topBtn">↑</button>
+<script src="script.js"></script>
+</body>
+</html>
