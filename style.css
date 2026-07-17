@@ -1439,3 +1439,235 @@ transform:scale(1.05);
 box-shadow:0 0 30px gold;
 
 }
+/*==========================
+RESPONSIVE
+==========================*/
+
+@media (max-width: 1200px) {
+    nav {
+        padding: 18px 6%;
+    }
+
+    .hero {
+        padding: 100px 6%;
+    }
+
+    .glass {
+        width: 420px;
+        height: 420px;
+    }
+
+    .title {
+        font-size: 42px;
+        margin-bottom: 60px;
+    }
+
+    section {
+        padding: 90px 6%;
+    }
+}
+
+@media (max-width: 900px) {
+    nav {
+        padding: 16px 5%;
+    }
+
+    .hero {
+        flex-direction: column;
+        text-align: center;
+        padding: 90px 5%;
+    }
+
+    .hero-content h1 {
+        font-size: 48px;
+    }
+
+    .hero-image {
+        margin-top: 40px;
+    }
+
+    .glass {
+        width: 360px;
+        height: 360px;
+    }
+
+    .hero-content p,
+    .service-card p,
+    .choose-card p,
+    .gallery-overlay p,
+    .about-card p {
+        font-size: 16px;
+    }
+
+    .title {
+        font-size: 38px;
+    }
+
+    section {
+        padding: 80px 5%;
+    }
+
+    .about-card,
+    .service-card,
+    .choose-card,
+    .price-card,
+    .team-card,
+    .testimonial-card,
+    .contact-info,
+    .contact-form {
+        padding: 30px;
+    }
+
+    .gallery-card,
+    .category-card {
+        min-height: 240px;
+    }
+}
+
+@media (max-width: 768px) {
+    nav {
+        justify-content: center;
+        gap: 14px;
+    }
+
+    nav ul {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 12px;
+    }
+
+    .hero {
+        padding: 80px 4%;
+    }
+
+    .hero-content h1 {
+        font-size: 42px;
+    }
+
+    .btn {
+        padding: 14px 30px;
+        font-size: 16px;
+        width: auto;
+    }
+
+    .glass {
+        width: 100%;
+        max-width: 320px;
+        height: 320px;
+    }
+
+    section {
+        padding: 70px 4%;
+    }
+
+    .title {
+        font-size: 34px;
+    }
+
+    .about-grid,
+    .stats,
+    .category-grid,
+    .gallery-grid,
+    .price-grid,
+    .team-grid,
+    .testimonial-grid,
+    .contact-grid {
+        gap: 22px;
+    }
+
+    .timeline {
+        margin: 40px auto;
+        padding: 0 20px;
+    }
+
+    .timeline-item,
+    .timeline-item:nth-child(even) {
+        width: 100%;
+        left: 0;
+        padding-left: 50px;
+        text-align: left;
+    }
+
+    .timeline::before {
+        left: 20px;
+    }
+
+    .timeline-dot,
+    .timeline-item:nth-child(even) .timeline-dot {
+        left: 10px;
+    }
+
+    iframe {
+        height: 260px;
+    }
+}
+
+@media (max-width: 600px) {
+    nav {
+        padding: 14px 4%;
+    }
+
+    nav ul {
+        display: none;
+    }
+
+    .hero {
+        padding: 70px 4%;
+    }
+
+    .hero-content h1 {
+        font-size: 34px;
+    }
+
+    .hero-content p {
+        font-size: 16px;
+    }
+
+    .glass {
+        height: 300px;
+    }
+
+    section {
+        padding: 60px 4%;
+    }
+
+    .title {
+        font-size: 32px;
+    }
+
+    .btn {
+        width: 100%;
+        padding: 14px 0;
+    }
+
+    .service-card::before {
+        width: 140px;
+        height: 140px;
+        top: -70px;
+        right: -70px;
+    }
+
+    .service-icon {
+        width: 75px;
+        height: 75px;
+        font-size: 34px;
+    }
+
+    .gallery-card,
+    .category-card {
+        min-height: 220px;
+    }
+
+    .faq-question {
+        font-size: 16px;
+    }
+
+    .contact-form input,
+    .contact-form textarea {
+        padding: 14px;
+    }
+
+    footer {
+        padding: 20px 0;
+    }
+}
