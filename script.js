@@ -2,11 +2,11 @@
 
 const images=[
 
-"01.jpeg",
-"02.jpeg",
-"03.jpeg",
-"04.jpeg",
-"05.jpeg"
+"image/01.jpeg",
+"image/02.jpeg",
+"image/03.jpeg",
+"image/04.jpeg",
+"image/05.jpeg"
 
 ];
 
@@ -96,4 +96,21 @@ function closeSuccess(){
     document.getElementById("successPopup").style.display = "none";
 
 }
+
+function toggleMenu(){
+    document.querySelector('nav').classList.toggle('open');
+}
+
+window.addEventListener('scroll', function() {
+    const topBtn = document.getElementById('topBtn');
+    if (window.scrollY > 300) {
+        topBtn.style.display = 'flex';
+    } else {
+        topBtn.style.display = 'none';
+    }
+});
+
+document.getElementById('topBtn').addEventListener('click', function(){
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+});
 
