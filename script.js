@@ -2,11 +2,11 @@
 
 const images=[
 
-"01.jpeg",
-"02.jpeg",
-"03.jpeg",
-"04.jpeg",
-"05.jpeg"
+"image/01.jpeg",
+"image/02.jpeg",
+"image/03.jpeg",
+"image/04.jpeg",
+"image/05.jpeg"
 
 ];
 
@@ -61,7 +61,17 @@ popup.style.display="none";
 
 }
 
+const notification = document.getElementById("notification");
 const form = document.getElementById("bookingForm");
+
+function showNotification(message) {
+    if (!notification) return;
+    notification.textContent = message;
+    notification.classList.add("show");
+    setTimeout(() => {
+        notification.classList.remove("show");
+    }, 3200);
+}
 
 form.addEventListener("submit", function(e){
 
@@ -72,6 +82,9 @@ form.addEventListener("submit", function(e){
 
     // Show success popup
     document.getElementById("successPopup").style.display = "flex";
+
+    // Show toast notification
+    showNotification("Booking submitted successfully!");
 
     // Reset form
     form.reset();
